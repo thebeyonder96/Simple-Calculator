@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body class="bg-slate-300">
+    <div class="flex items-center justify-center h-screen">
+        <div id="disp" class="w-[420px] h-[850px] bg-white rounded-3xl overflow-hidden">
+            <div class="h-[350px] w-full flex flex-col">
+                <div id="before" class="relative flex items-center justify-between w-[120px] h-[40px] mx-auto mt-4 px-6 bg-[#A9DCFD] rounded-3xl before:contents' before:w-[50px] before:h-[30px] before:rounded-full before:bg-[#D8EEFF] before:absolute before:left-[10%] transition-all duration-700">
+                    <i id="light" class="fa-solid z-10 fa-sun cursor-pointer"></i>
+                    <i id="dark" class="fa-solid z-10 fa-moon cursor-pointer"></i>
+                </div>
+                <span class="flex-1"></span>
+                <p id="inp" class="flex justify-end px-12 pb-4 text-gray-400 font-medium"></p>
+                <p id="out" class="flex justify-end px-12  pb-4 text-6xl font-extrabold -mb-[80px]"></p>
+            </div>
+            <div id="bottom"
+                class="grid grid-cols-4 items-center place-items-center w-full h-[500px] bg-gradient-to-r from-blue-200 to-[#6396C5] backdrop-blur-2xl p-6 transition-all duration-1000 ease">
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full" onclick="clearInp()">AC</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full" onclick="remove()"><i class="fa-solid fa-delete-left"></i></button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full" onclick="percentage()">%</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full  text-2xl" onclick="display('÷')">÷</button>
+
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full"
+                    onclick="display(1)">1</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full"
+                    onclick="display(2)">2</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full"
+                    onclick="display(3)">3</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full"
+                    onclick="display('x')">X</button>
+
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full" onclick="display(4)">4</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full" onclick="display(5)">5</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full" onclick="display(6)">6</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full text-3xl" onclick="display('-')">-</button>
+
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full" onclick="display(7)">7</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full" onclick="display(8)">8</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full" onclick="display(9)">9</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full  text-2xl" onclick="display('+')">+</button>
+
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full  text-2xl" onclick="display('.')">.</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full" onclick="display(0)">0</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full" onclick="display('00')"> 00</button>
+                <button class="w-[70px] h-[70px] bg-slate-50 backdrop-blur-md font-black rounded-full  text-2xl" onclick="evalu()">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
