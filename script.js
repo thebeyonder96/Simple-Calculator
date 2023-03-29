@@ -42,7 +42,7 @@ function percentage() {
   value = inp.innerText;
   value = value.replaceAll("x", "*");
 
-  inp.innerText = eval(value) / 100;
+  inp.innerText = (eval(value) / 100).toFixed(2);
 }
 
 // ---------------------------------------- Evaluating the inputs
@@ -52,7 +52,7 @@ function evalu() {
   value = value.replaceAll("x", "*");
   value = value.replaceAll("÷", "/");
   re = eval(value);
-  out.innerText = re.toFixed(4);
+  out.innerText = re;
   inp.classList.remove("text-5xl");
   inp.classList.remove("pb-16");
   out.classList.add("mb-0");
